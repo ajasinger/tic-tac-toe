@@ -1,6 +1,6 @@
 
 const player1 = 'X';
-const player2 = 'Y';
+const player2 = 'O';
 let currentPlayer = player1;
 const squares = new Array(9).fill('');
 const board = document.getElementById('board');
@@ -38,10 +38,12 @@ const handleSquareClick = (index) => {
     if (squares[index] === '') {
         squares[index] = currentPlayer;
         document.getElementById(`square${index}`).textContent = currentPlayer;
-        if (checkWin()) {
+        if (isWin()) {
             gameStatus.textContent = `${currentPlayer} wins!`;
-        } else if (checkDraw()) {
+            disableBoard();
+        } else if (isTie()) {
             gameStatus.textContent = 'It&#39;s a tie!';
+            disableBoard();
         } else {
             currentPlayer = currentPlayer === player1 ? player2 : player1;
             gameStatus.textContent = `${currentPlayer}'s turn`;
@@ -58,6 +60,14 @@ const isWin = () => {
 const isTie = () => {
     return squares.every(square => square !== '');
 }
+
+const disableBoard = () => {
+    board.querySelectorAll('.square').forEach(square => {
+        //prevent clicks
+        square.style.pointerEvents = 'none';
+    });
+}
+
 
 // Reset the game
 resetButton.addEventListener('click', newGame);
