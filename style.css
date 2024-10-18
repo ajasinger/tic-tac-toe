@@ -1,0 +1,44 @@
+body {
+    font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+button {
+    font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    background: black;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 2px solid black;
+    border-radius: 24px;
+    transition: 0.2s ease;
+}
+
+button:hover{
+    color: black;
+    background: white;
+}
+
+.boardContainer {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
