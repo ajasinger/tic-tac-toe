@@ -1,3 +1,5 @@
+//During your interview, you will pair on adding support for a computer player to your game. 
+//You can start with random moves and make the AI smarter if you have time.
 
 const player1 = 'X';
 const player2 = 'O';
