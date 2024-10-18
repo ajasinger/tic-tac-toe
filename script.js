@@ -43,7 +43,7 @@ const handleSquareClick = (index) => {
             gameStatus.textContent = `${currentPlayer} wins!`;
             disableBoard();
         } else if (isTie()) {
-            gameStatus.textContent = 'It&#39;s a tie!';
+            gameStatus.textContent = "It's a tie!";
             disableBoard();
         } else {
             currentPlayer = currentPlayer === player1 ? player2 : player1;
