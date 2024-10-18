@@ -69,6 +69,5 @@ const disableBoard = () => {
     });
 }
 
-
 // Reset the game
 resetButton.addEventListener('click', newGame);
