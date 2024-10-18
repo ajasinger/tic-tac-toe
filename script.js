@@ -23,9 +23,10 @@ const newGame = () => {
     currentPlayer = player1;
     squares.fill('');
     gameStatus.textContent = `${currentPlayer}'s turn`;
-    //populate blank board
+    //revert to blank board and make clickable
     board.querySelectorAll('.square').forEach((square, index) => {
         square.textContent = '';
+        square.style.pointerEvents = 'auto'; 
         square.addEventListener('click', () => handleSquareClick(index), { once: true });
     });
 }
