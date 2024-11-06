@@ -113,3 +113,66 @@ const disableBoard = () => {
 
 // Reset the game
 //resetButton.addEventListener('click', newGame);
+
+
+
+//GAME OF LIFE CODE 
+// let initialBoardGame = [
+//     [0, 1, 0],
+//     [1, 1, 0],
+//     [0, 0, 0],
+// ];
+
+// // console.log('initial', initialBoardGame)
+
+// // for(let i=0; i < initialBoardGame.length; i++) {
+// //     for(let j=0; j < initialBoardGame[i].length; j++) {
+// //         initialBoardGame[i][j] = Math.floor(Math.random()*2)
+// //     }
+// // }
+
+// console.log('initial', initialBoardGame)
+
+// const checkNeighborsIs3 = (atom, index) => {
+//     if (atom === 1) return atom
+
+//     if (initialBoardGame[index][index + 1] === 1
+//         && initialBoardGame[index + 1][index] === 1
+//         && initialBoardGame[index + 1][index + 1] === 1) {
+//             return 1
+//         }
+    
+//     return atom
+// }
+
+// const handleCheck = (atom, index) => {
+//     // if 3 neighbors are alive - make it alive
+//     if (atom === 1) {
+//         checkNeighborsIs3(atom, index)
+//     }
+//     checkNeighborsLessThan2(atom, index)
+    
+// }
+
+// for(let i=0; i < initialBoardGame.length; i++) {
+//     for(let j=0; j < initialBoardGame[i].length; j++) {
+//         initialBoardGame[i][j] = handleCheck(initialBoardGame[i][j], i)
+//     }
+// }
+
+// console.log('after', initialBoardGame)
+// const checkNeighborsLessThan2 = (atom, index) => {
+//     if (atom === 0) return atom
+
+//     if ((initialBoardGame[index][index + 1] 
+//         + initialBoardGame[index + 1][index] 
+//         + initialBoardGame[index + 1][index + 1]) < 2) {
+//             return 0
+//         }
+
+//     return atom
+// }
+
+// const checkNeighborsGreaterThan3 = () => {
+    
+// }
